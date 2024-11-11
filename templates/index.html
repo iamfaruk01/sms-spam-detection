@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection</title>
+    <style>
+        body {
+           background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main-container {
+            display: flex;
+            gap: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+        .container, .members {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .container {
+            flex: 3;
+            text-align: center;
+        }
+        .members {
+            flex: 1;
+            text-align: left;
+        }
+        h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #5c9cff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h2>SMS Spam Detection</h2>
+            <form action="/" method="post">
+                <textarea name="message" rows="5" placeholder="Enter your message here...">{{ message }}</textarea><br>
+                <button type="submit">Predict</button>
+            </form>
+            {% if prediction_text %}
+            <p class="result">{{ prediction_text }}</p>
+            {% endif %}
+        </div>
+        <div class="members">
+            <h3>Internship Group Members</h3>
+            <ul>
+                <li>Mridul Roy</li>
+                <li>Mriganka Jyoti Deka</li>
+                <li>Sourav Sharma</li>
+                <li>Faruk Khan</li>
+                <li>Sanjeev Iqbal Ahmed</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
