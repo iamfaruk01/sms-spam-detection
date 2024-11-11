@@ -5,8 +5,9 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model and vectorizer
-with open('C:/Users/iamfa/Downloads/sms-spam-detection-combined/app/model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model, feature_extraction = pickle.load(f)
+
 
 # Function to predict spam or ham
 def predict_spam_or_ham(message):
