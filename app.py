@@ -29,9 +29,9 @@ def predict():
         
         # Set the prediction result text
         if prediction == 1:
-            prediction_text = "Ham mail"
+            prediction_text = "Ham message"
         else:
-            prediction_text = "Spam mail"
+            prediction_text = "Spam message"
     
     # Render the template and pass message and prediction_text to the HTML
     return render_template('index.html', message=message, prediction_text=prediction_text)
